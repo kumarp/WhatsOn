@@ -1,5 +1,5 @@
 @wip
-Feature: Basic Movie Search on Streaming Services
+Feature: Basic Movie Search on Streaming Servicesss
 
   Scenario: New scenario
     Given ...
