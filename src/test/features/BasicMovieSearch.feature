@@ -77,6 +77,7 @@ Feature: Basic Movie Search on Streaming Services
     | Riverdance: Lord of the Dance                     | Netflix        |
     
     
+    
     #=====================================================================================
     
     Scenario: A movie I search for is not available
@@ -101,3 +102,6 @@ Feature: Basic Movie Search on Streaming Services
     
     Then the following movies are available on the following services:
     | Movie Title                                       | Services       |
+    |                                                   |                |
+    
+    And I receive a message saying "No Results Found"
