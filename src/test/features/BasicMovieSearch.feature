@@ -30,10 +30,14 @@ Feature: Basic Movie Search on Streaming Services
     | The Lord of the Rings: The Fellowship of the Ring   |
     | The Lord of the Rings: The Return of the King       |
     | The Lord of the Blings: The Return of the Bling     |
+    | Riverdance: Lord of the Dance                       |
 
     
-    When I search for "Lord of the Rings"
+    When I search for "lord of the rings"
     
     
-    Then I should get the following results:
-    
+    Then the following movies are available on the following services:
+    | Movie Title                                       | Services       |
+    | The Lord of the Rings: The Fellowship of the Ring | Netflix, Hulu  |
+    | The Lord of the Rings: The Teo Towers             | Hulu           |
+    | The Lord of the Rings: The Return of the King     | Netflix, Hulu  |
