@@ -15,7 +15,8 @@ Feature: Basic Movie Search on Streaming Services
     
   - Search is case-insensitive
     
-    
+  #=====================================================================================
+  
   Scenario: A movie I search for is available
     
     Given the following movie titles are available on Hulu:
@@ -44,5 +45,55 @@ Feature: Basic Movie Search on Streaming Services
     
     
     
+    Scenario: A movie I search for is available
+    
+    Given the following movie titles are available on Hulu:
+    | Movie Title                                       |
+    | The Lord of the Rings: The Fellowship of the Ring |
+    | The Lord of the Rings: The Two Towers             |
+    | The Lord of the Rings: The Return of the King     |
+    | Babe: Pig in the City                             |
+    
+    And the following movie titles are available on Netflix:
+    | Movie Title                                         |
+    | The Lord of the Rings: The Fellowship of the Ring   |
+    | The Lord of the Rings: The Return of the King       |
+    | The Lord of the Blings: The Return of the Bling     |
+    | Riverdance: Lord of the Dance                       |
+
+    
+    When I search for "lord OF tH"
     
     
+    Then the following movies are available on the following services:
+    | Movie Title                                       | Services       |
+    | The Lord of the Rings: The Fellowship of the Ring | Netflix, Hulu  |
+    | The Lord of the Rings: The Two Towers             | Hulu           |
+    | The Lord of the Rings: The Return of the King     | Netflix, Hulu  |
+    | The Lord of the Blings: The Return of the Bling   | Netflix        |
+    | Riverdance: Lord of the Dance                     | Netflix        |
+    
+    
+    
+    Scenario: A movie I search for is not available
+    
+    Given the following movie titles are available on Hulu:
+    | Movie Title                                       |
+    | The Lord of the Rings: The Fellowship of the Ring |
+    | The Lord of the Rings: The Two Towers             |
+    | The Lord of the Rings: The Return of the King     |
+    | Babe: Pig in the City                             |
+    
+    And the following movie titles are available on Netflix:
+    | Movie Title                                         |
+    | The Lord of the Rings: The Fellowship of the Ring   |
+    | The Lord of the Rings: The Return of the King       |
+    | The Lord of the Blings: The Return of the Bling     |
+    | Riverdance: Lord of the Dance                       |
+
+    
+    When I search for "Star Wars"
+    
+    
+    Then the following movies are available on the following services:
+    | Movie Title                                       | Services       |
