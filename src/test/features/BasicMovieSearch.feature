@@ -14,6 +14,8 @@ Feature: Basic Movie Search on Streaming Services
   - Search on title are 'contains' searches. Any result that includes the search string will be shown.    
     
   - Search is case-insensitive
+  
+  - For now, interaction with live services is mocked
     
   #=====================================================================================
   
@@ -44,6 +46,7 @@ Feature: Basic Movie Search on Streaming Services
     | The Lord of the Rings: The Return of the King     | Netflix, Hulu  |
     
     
+    #=====================================================================================
     
     Scenario: A movie I search for is available
     
@@ -74,6 +77,7 @@ Feature: Basic Movie Search on Streaming Services
     | Riverdance: Lord of the Dance                     | Netflix        |
     
     
+    #=====================================================================================
     
     Scenario: A movie I search for is not available
     
