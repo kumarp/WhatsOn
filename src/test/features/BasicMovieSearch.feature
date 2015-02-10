@@ -39,5 +39,10 @@ Feature: Basic Movie Search on Streaming Services
     Then the following movies are available on the following services:
     | Movie Title                                       | Services       |
     | The Lord of the Rings: The Fellowship of the Ring | Netflix, Hulu  |
-    | The Lord of the Rings: The Teo Towers             | Hulu           |
+    | The Lord of the Rings: The Two Towers             | Hulu           |
     | The Lord of the Rings: The Return of the King     | Netflix, Hulu  |
+    
+    
+    
+    
+    
